@@ -32,8 +32,8 @@ Método: GET
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
+git clone https://github.com/jussaragranja/basic-fakerestapi-golang-test.git
+cd basic-fakerestapi-golang-test
 ```
 
 2. Instale as dependências:
@@ -46,7 +46,7 @@ go get github.com/stretchr/testify/assert
 3. Execute os testes:
 
 ```bash
-go test -v
+go test ./tests/* -v
 ```
 
 O teste irá realizar uma requisição GET para a API, validar o status da resposta, o formato dos dados e se os campos obrigatórios estão presentes e corretos.
