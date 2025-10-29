@@ -20,7 +20,7 @@ type Activity struct {
 func TestGetActivities(t *testing.T) {
 	client := resty.New() // Criando cliente HTTP com a lib resty
 	resp, err := client.R(). // Resultado da requisição salvo em resp, e erros em err
-		SetHeader("Accept", "text/plain; v=1.0").
+		SetHeader("Accept", "text/plain; v=1.0"). // Definindo o header da requisição
 		Get("https://fakerestapi.azurewebsites.net/api/v1/Activities") // Montando e executando a requisição GET
 
 	assert.NoError(t, err)                                                    // Verifica se não houve erro ao fazer a requisição. Se houver, o teste falha aqui.
