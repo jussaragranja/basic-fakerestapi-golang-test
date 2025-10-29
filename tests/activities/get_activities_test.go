@@ -40,8 +40,7 @@ func TestGetActivities(t *testing.T) {
 	assert.NoError(t, err, "DueDate campo data deve estar em formato RFC3339")
 
 	// Validando contrato de todos os itens do array
-	// Para cada item retornado pela API:
-	for _, act := range activities {
+	for _, act := range activities { // Para cada item retornado pela API:
 		assert.NotZero(t, act.Id)                       // valida que o Id não é zero
 		assert.NotEmpty(t, act.Title)                   // valida que o Title não está vazio
 		assert.NotEmpty(t, act.DueDate)                 // valida que o DueDate não está vazio
